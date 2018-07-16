@@ -5,6 +5,12 @@
 <head>
     <title>Learn Vue</title>
 
+    <style type="text/css">
+        .color-red {
+            color:red;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -19,6 +25,16 @@
 
     <input id="input" type="text" v-model="newName">
     <button @click="addName">Add Name</button>
+
+
+
+    <button v-bind:title="title">Hover over me</button>
+
+    <h3 :class="className">Click me</h3>
+
+    <!--assign this 'is-loading' class when  condition true-->
+    <button :class="{ 'color-red': isLoading }" @click="toggleClass">Click me</button>
+    <button :disabled="isDisabled" @click="makeDisabled">Disable me</button>
 
 </div>
 
@@ -35,7 +51,11 @@
         el: '#root',
         data: {
             newName: '',
-            names: ['Joe', 'Jane', 'Mary', 'Jack']
+            names: ['Joe', 'Jane', 'Mary', 'Jack'],
+            title: 'Now the title is being set through JavaScript.',
+            className: 'color-red',
+            isLoading: false,
+            isDisabled: false
         },
 
         methods: {
@@ -43,7 +63,14 @@
                 this.names.push(this.newName);
 
                 this.newName = '';
+            },
+            toggleClass() {
+                this.isLoading = true;
+            },
+            makeDisabled() {
+                this.isDisabled = true;
             }
+
 
 
         }
