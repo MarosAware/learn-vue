@@ -5,9 +5,10 @@
 <head>
     <title>Learn Vue</title>
 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
     <style type="text/css">
-        .color-red {
-            color:red;
+        body {
+            padding-top:40px;
         }
     </style>
 
@@ -15,11 +16,13 @@
 
 <body>
 
-<div id="root">
+<div id="root" class="container">
 
-    <task>Go to the store</task>
-    <task>Go to the bank</task>
-    <task>Go to work</task>
+
+    <message title="Hello world!" body="Lorem ipsum dolor sit amet."></message>
+    <message title="Hello world! Again" body="Lorem ipsum dolor sit amet orem."></message>
+
+    <task-list></task-list>
 
 </div>
 
