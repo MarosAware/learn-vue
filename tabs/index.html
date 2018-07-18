@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabs</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+    <style>body {padding-top: 50px;}</style>
+</head>
+
+<body>
+    <div id="app" class="container">
+
+        <tabs>
+
+            <tab name="About Us" v-bind:selected="true">
+                <h1>Here is the content for about us tab.</h1>
+            </tab>
+
+            <tab name="About Our Culture">
+                <h1>Here is the content for about our culture.</h1>
+            </tab>
+
+            <tab name="About Our Vision">
+                <h1>Here is the content for about our vision tab.</h1>
+            </tab>
+
+        </tabs>
+
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
