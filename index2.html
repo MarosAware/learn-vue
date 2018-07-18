@@ -18,6 +18,13 @@
 
 <div id="root" class="container">
 
+    <modal v-show="isModalVisible" @close="isModalVisible = false">
+        <p>We can insert any text here.</p>
+    </modal>
+    <button @click="isModalVisible = true">Show Modal</button>
+
+
+
 
     <message title="Hello world!" body="Lorem ipsum dolor sit amet."></message>
     <message title="Hello world! Again" body="Lorem ipsum dolor sit amet orem."></message>
