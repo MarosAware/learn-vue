@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabs</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+    <style>body {padding-top: 50px;}</style>
+</head>
+
+<body>
+    <div id="app" class="container">
+
+        <coupon @applied="onCouponApplied">
+
+        </coupon>
+
+        <h1 v-if="couponApplied">You used a coupon!</h1>
+
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
