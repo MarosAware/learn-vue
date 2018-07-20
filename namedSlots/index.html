@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabs</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+    <style>body {padding-top: 50px;}</style>
+</head>
+
+<body>
+    <div id="app" class="container">
+
+        <button @click="isModalVisible = true">Show modal</button>
+        <modal v-show="isModalVisible" @close="isModalVisible = false">
+            <template slot="header">My title</template>
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, possimus.
+            <template slot="footer">
+                <button class="button is-success">Save changes</button>
+                <button class="button">Cancel</button>
+            </template>
+
+        </modal>
+
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
