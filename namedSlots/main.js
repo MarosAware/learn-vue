@@ -1,3 +1,15 @@
+Vue.component('progress-view', {
+
+    data() {
+        return {
+            completionRate: 0
+        }
+    }
+
+});
+
+
+
 Vue.component('modal', {
    template: `
 <div class="modal is-active">
