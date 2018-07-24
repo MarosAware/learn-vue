@@ -1,11 +1,11 @@
 Vue.component('todo-item', {
     template: '\
     <li>\
-      {{ title }}\
+      {{ id }}.{{ title }}\
       <button v-on:click="$emit(\'remove\')">Remove</button>\
     </li>\
   ',
-    props: ['title']
+    props: ['title', 'id']
 })
 
 var app = new Vue({
@@ -30,8 +30,12 @@ var app = new Vue({
     },
     methods: {
         addNewTodo: function () {
+            let lastId = this.todos[this.todos.length -1].id;
+
+            let newId = lastId + 1;
+
             this.todos.push({
-                id: this.nextTodoId++,
+                id: newId,
                 title: this.newTodoText
             })
             this.newTodoText = ''
